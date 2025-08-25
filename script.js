@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCloseBtn = document.querySelector('.modal-close');
 
     // Function to update the progress bar
-    function updateProgressBar() {
-        const progress = (currentQuestionIndex / totalQuestions) * 100;
+      // Function to update the progress bar
+      function updateProgressBar() {
+        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
         progressFill.style.width = `${progress}%`;
     }
 
