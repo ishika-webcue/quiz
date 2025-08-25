@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualifying Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="quiz-container">
+        <div id="main-content">
+            <h1 class="main-heading">Please answer the questions below to see if you<br>qualify to view this short educational video.</h1>
+            <!-- The question line is now before the progress bar -->
+            <h2 class="question-text" id="question-text"></h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            
+            <div class="options" id="options-container">
+                <!-- Options will be injected here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Modal for Results -->
+        <div id="results-modal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-heading">RESULTS ANALYSIS COMPLETE</div>
+                <div class="modal-body">Thank You For Completing Our Quiz! Your Results Qualify You For The "Turmeric Hack"</div>
+                <a href="#" class="modal-button">
+                    <span class="icon">&#9658;</span> <!-- Play icon -->
+                    CLICK HERE FOR VIDEO INSTRUCTIONS
+                    <br>
+                    AND TO RECEIVE YOUR FULL BLUEPRINT
+                </a>
+                <div class="modal-note">(Your results are confidential - please do not share this link)</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

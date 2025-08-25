@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f2f4f8; /* Light gray background */
+    color: #000;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: transparent; /* Changed to transparent */
+    border-radius: 0; /* Removed rounded corners */
+    box-shadow: none; /* Removed box shadow */
+    margin: 0 auto; /* center horizontally */
+}
+
+/* Headings */
+.main-heading {
+    text-align: center;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+    padding: 10px !important;
+    line-height: 1em;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    max-width: 700px; /* force wrap after the first phrase */
+    margin-left: auto;
+    margin-right: auto;
+    white-space: normal;
+}
+
+.question-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 15px 0 0;
+    padding-bottom: 15px;
+    border: none;
+    line-height: 1.2;
+}
+
+/* Optional: match provided selector for compatibility */
+.cfs_26 .surveyStepHeadline {
+    font-size: 26px;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin: 10px 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 65%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4a90e2;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.option:hover {
+    background-color: #4a90e2;
+    border: 1px solid #4a90e2;
+    border-radius: 6px;
+}
+
+.option:hover .option-text {
+    color: #ffffff;
+}
+
+.option:hover input[type="radio"] {
+    border-color: #ffffff;
+}
+
+.option:hover input[type="radio"]:checked::before,
+.option:hover input[type="radio"]::before {
+    background-color: #ffffff;
+}
+
+.option.selected {
+    box-shadow: none;
+    border: 1px solid #4a90e2;
+    background-color: #4a90e2;
+    border-radius: 6px;
+}
+
+/* Selected state color accent */
+.option.selected .option-text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Improve radio visibility on selected */
+.option.selected input[type="radio"] {
+    border-color: #ffffff;
+}
+
+.option.selected input[type="radio"]:checked::before {
+    background-color: #ffffff;
+}
+
+.option-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    user-select: none;
+    display: block;
+    margin-left: 15px;
+}
+
+.option input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #a0a0a0;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 15px;
+    transition: border-color 0.3s;
+}
+
+.option input[type="radio"]:checked {
+    border-color: #4a90e2;
+}
+
+.option input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Modal and other styles (no changes needed) */
+.button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #357ABD;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-heading {
+    font-size: 20px;
+    color: #27ae60;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.modal-body {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.modal-button:hover {
+    background-color: #357ABD;
+}
+
+.modal-button .icon {
+    font-size: 18px;
+}
+
+.modal-note {
+    font-size: 14px;
+    color: #888;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
