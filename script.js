@@ -36,8 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to update the progress bar
       // Function to update the progress bar
       function updateProgressBar() {
-        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-        progressFill.style.width = `${progress}%`;
+        // Set a fixed width for the first question
+        if (currentQuestionIndex === 0) {
+            // Adjust this percentage to match your design
+            progressFill.style.width = '10%'; 
+        } else {
+            // Calculate progress for subsequent questions
+            const progress = ((currentQuestionIndex) / totalQuestions) * 100;
+            progressFill.style.width = `${progress}%`;
+        }
     }
 
     // Function to show a question
